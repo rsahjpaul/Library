@@ -1,43 +1,133 @@
 * {
-    color: white;
+  color: white;
 }
 
 body {
-    background-color:#55B4B0;
-    margin: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  background-color: #55b4b0;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.inputs {
-    margin-top: 10vh;
+.modal {
+  display: none;
+
+}
+
+.form {
+  font-family: Helvetica;
+
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 20vw;
+  height: 45vh;
+  position: fixed; /* Change to fixed for centering */
+  top: 40%; /* Move the form down by 50% of the viewport height */
+  left: 50%; /* Move the form right by 50% of the viewport width */
+  transform: translate(-50%, -50%); /* Center the form precisely */  
+  background-color: #9B2335;
+  border-radius: 15px;
+  box-shadow: 0px 5px 5px grey; /* Adjust the values as needed */
+
+}
+
+.add {
+  
+    font-size: xx-large;
+    color: white;
     display: flex;
-    flex-direction: column;
-    width: 20vw;
-    
+    height: 5vh;
+    width: 5vh;
+    border-radius: 50px;
+    background-color: #e15d44;
+  
+}
+
+.add:hover {
+  border: solid 1px black;
 }
 
 input {
-background-color: white;
-border-style: none;
-margin: 10px;
-color: black;
+  background-color: white;
+  border-style: none;
+  margin: 10px;
+  color: black;
 }
 
 button {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    background-color: white;
-    color: black;
-    border-style:none;
-
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  background-color: white;
+  color: black;
+  border-style: none;
 }
 
 .header {
-    background-color:#E15D44;
-    height: 10vh;
-    width: 100vw;
-    padding-left: 20px;
+  font-family: Helvetica;
+  background-color: #e15d44;
+  height: 9vh;
+  width: 100vw;
+  padding-left: 50px;
+}
+
+.button-container {
+}
+
+.new-book {
+  font-size: xx-large;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+  width: 5vh;
+  border-radius: 50px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: #e15d44;
+}
+
+.new-book:hover {
+  border: solid 1px black;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.displayed {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
+
+  padding: 10vh;
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  height: 35vh;
+  width: 30vh;
+  border-radius: 20px;
+  background-color: beige;
+  box-shadow: 0px 5px 5px grey; /* Adjust the values as needed */
+  margin: 10px;
+}
+
+.displayNewBook {
+
+  color: black;
+font-family: Helvetica;
 }
