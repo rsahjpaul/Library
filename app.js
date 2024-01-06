@@ -17,12 +17,39 @@ function Book(title, author, pages, read) {
   this.pages = pages;
 
   this.read = read;
-
-  // this.info = () => {
-  //   return `${title} by ${author}, ${pages} pages, Read: ${read}`;
-  // };
 }
 
+let addBookToLibrary = (title, author, pages, read) => {
+  let newBook = new Book(title, author, pages, read);
+  console.log(newBook)
+  myLibrary.push(newBook);
+
+  let displayNewBook = document.createElement("div");
+  displayNewBook.classList.add("book-card");
+
+  let displayTitle = document.createElement("h3");
+  displayTitle.textContent = `${title}`;
+  displayTitle.classList.add("displayNewBook");
+
+  let displayAuthor = document.createElement("h3");
+  displayAuthor.textContent = `${author}`;
+  displayAuthor.classList.add("displayNewBook");
+
+  let displayPages = document.createElement("h3");
+  displayPages.textContent = `${pages}`;
+  displayPages.classList.add("displayNewBook");
+
+  let displayRead = document.createElement("h3");
+  displayRead.textContent = `${read}`;
+  displayRead.classList.add("displayNewBook");
+
+  displayNewBook.appendChild(displayTitle);
+  displayNewBook.appendChild(displayAuthor);
+  displayNewBook.appendChild(displayPages);
+  displayNewBook.appendChild(displayRead);
+
+  bookSection.appendChild(displayNewBook);
+};
 
 addNewBookButton.addEventListener("click", (event) => {
   if (
@@ -56,40 +83,5 @@ addBook.addEventListener("click", (event) => {
     addBookToLibrary(title, author, pages, read);
   }
 
-  myLibrary.forEach((book) => {
-    console.log(book.title);
-  });
-
   addBookModal.style.display = "none";
 });
-
-let addBookToLibrary = (title, author, pages, read) => {
-  let newBook = new Book(title, author, pages, read);
-  myLibrary.push(newBook);
-
-  let displayNewBook = document.createElement("div");
-  displayNewBook.classList.add("book-card");
-
-  let displayTitle = document.createElement("h3");
-  displayTitle.textContent = `${title}`;
-  displayTitle.classList.add("displayNewBook");
-
-  let displayAuthor = document.createElement("h3");
-  displayAuthor.textContent = `${author}`;
-  displayAuthor.classList.add("displayNewBook");
-
-  let displayPages = document.createElement("h3");
-  displayPages.textContent = `${pages}`;
-  displayPages.classList.add("displayNewBook");
-
-  let displayRead = document.createElement("h3");
-  displayRead.textContent = `${read}`;
-  displayRead.classList.add("displayNewBook");
-
-  displayNewBook.appendChild(displayTitle);
-  displayNewBook.appendChild(displayAuthor);
-  displayNewBook.appendChild(displayPages);
-  displayNewBook.appendChild(displayRead);
-
-  bookSection.appendChild(displayNewBook);
-};
